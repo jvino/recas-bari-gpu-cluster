@@ -1,0 +1,22 @@
+{
+  "name": "$USER-nvidia-smi",
+  "command": "sleep 5 && nvidia-smi",
+  "shell": true,
+  "schedule": "R1//P1Y",
+  "retries": 5,
+  "description": "",
+  "cpus": 1,
+  "disk": 0,
+  "mem": 1024,
+  "gpus": 1,
+  "environmentVariables": [],
+  "arguments": [],
+  "runAsUser": "$USER",
+  "owner": "$USER",
+  "ownerName": "$USER",
+  "container": {
+    "type": "mesos",
+    "image": "$DOCKER_IMAGE",
+    "volumes": [{"containerPath": "$USER_HOME", "hostPath": "$USER_HOME", "mode": "RW"}]
+  }
+}

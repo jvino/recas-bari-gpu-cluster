@@ -1,0 +1,4 @@
+hostname: "fake-hostname.recas.ba.infn.it"
+user: "fake-user"
+passwd: "fake-password"
+port: 12345
