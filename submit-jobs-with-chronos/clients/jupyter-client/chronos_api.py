@@ -5,10 +5,10 @@ import json
 from datetime import datetime
 
 class chronosAPI:
-    def __init__(self, hostname, port, user, passwd):
+    def __init__(self, hostname, port, user, password):
         self.hostname = hostname
         self.port = port
-        self.auth = (user, passwd)
+        self.auth = (user, password)
         self.base_url = f"http://{self.hostname}:{self.port}"
         self.headers = {'content-type': 'application/json'}
         
