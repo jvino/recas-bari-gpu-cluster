@@ -4,6 +4,9 @@ from time import sleep, time
 import json 
 from datetime import datetime
 
+def print_pretty(d):
+    print(json.dumps(d,indent=2))
+
 class chronosAPI:
     def __init__(self, hostname, port, user, password):
         self.hostname = hostname
@@ -41,6 +44,7 @@ class chronosAPI:
         chronos_json["retries"] = 4
         chronos_json.update(resources)
         chronos_json["container"] = container
+        print_pretty(chronos_json)
         return chronos_json
 
     def send_job(self,job_json):
