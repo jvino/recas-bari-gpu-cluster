@@ -1,5 +1,5 @@
 import yaml
-from chronos_api import chronosAPI
+from chronos_api import chronosAPI, print_pretty
 
 # --- LOAD CHRONOS CONFIGURATION ---
 with open("config.yaml", "r") as file:
@@ -31,7 +31,7 @@ for i in range(1):
                                         docker_image, 
                                         paths_to_mount, 
                                         resources)
-    #print_pretty(job_sc)
+    print_pretty(job_sc)
     l_jobs.append(job_sc)
 
 # --- SUBMIT JOBS ---

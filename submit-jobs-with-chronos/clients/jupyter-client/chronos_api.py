@@ -44,7 +44,6 @@ class chronosAPI:
         chronos_json["retries"] = 4
         chronos_json.update(resources)
         chronos_json["container"] = container
-        print_pretty(chronos_json)
         return chronos_json
 
     def send_job(self,job_json):
